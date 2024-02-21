@@ -48,15 +48,11 @@ button {
   cursor: pointer;
 }
 
-img {
-  /* display: block;
-  height: auto; */
-}
 
 select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  /* appearance: none; */
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
   border: none;
   outline: none;
 }
