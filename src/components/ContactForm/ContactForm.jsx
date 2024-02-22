@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import CSS from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contactSlice';
 
 export function ContactForm() {
   const initialValues = {
@@ -26,13 +27,7 @@ export function ContactForm() {
   const handleSubmit = (values, actions) => { 
     actions.resetForm();
     console.log(values);
-    dispatch(()=>{})
-  
-    // 
-    // return addContactCard({
-    //   ...values,
-    //   id: nanoid(),
-    // });
+    dispatch(addContact({id: nanoid(), name: values.name, number: values.number}))
   };
 
   return (

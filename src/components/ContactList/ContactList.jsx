@@ -1,6 +1,9 @@
-import { Contact } from '../Contact/Contact';
+import { useSelector } from "react-redux";
 
-export function ContactList({ contacts }) {
+
+export function ContactList() {
+const contacts = useSelector();
+
   return (
     <ul className="list">
       {contacts.map(contact => {
@@ -11,7 +14,6 @@ export function ContactList({ contacts }) {
             id={id}
             name={name}
             number={number}
-            handleDelete={handleDelete}
           />
         );
       })}
