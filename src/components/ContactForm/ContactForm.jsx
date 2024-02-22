@@ -4,7 +4,9 @@ import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import CSS from './ContactForm.module.css';
 
-export function ContactForm({addContactCard}) {
+
+
+export function ContactForm() {
   const initialValues = {
     name: '',
     number: '',
