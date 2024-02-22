@@ -9,17 +9,19 @@ import {
   REGISTER,
 } from 'redux-persist';
 
-const initialState = {
-  contacts: {
-    items: [],
-  },
-  filters: {
-    name: '',
-  },
-};
+// const initialState = {
+//   contacts: {
+//     items: [],
+//   },
+//   filters: {
+//     name: '',
+//   },
+// };
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    addContact: 
+  },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
