@@ -1,6 +1,6 @@
 import { Contact } from '../Contact/Contact';
 
-export function ContactList({ contacts, handleDelete }) {
+export function ContactList({ contacts }) {
   return (
     <ul className="list">
       {contacts.map(contact => {

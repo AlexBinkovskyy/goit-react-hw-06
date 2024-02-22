@@ -48,11 +48,6 @@ button {
   cursor: pointer;
 }
 
-img {
-  /* display: block;
-  height: auto; */
-}
-
 select {
   appearance: none;
   -webkit-appearance: none;
@@ -77,4 +72,10 @@ select {
 .loaderMag {
   display: block;
   margin: 50px auto;
+}
+
+.wrapper {
+  padding: 10px;
+  width: 450px;
+  margin: 0 auto;
 }

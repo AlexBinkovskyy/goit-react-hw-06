@@ -3,10 +3,10 @@ import { ContactList } from "./ContactList/ContactList";
 import { SearchBar } from "./SearchBar/SearchBar";
 
 export const App = () => {
-  return <div>
+  return <div className='wrapper'>
   <h1 className="header">Phonebook</h1>
-  <ContactForm addContactCard={addContactCard} />
-  <SearchBar inputValue={inputValue} handleFilter={handleFilter} />
-  <ContactList contacts={activeCards} handleDelete={handleDelete} />
+  <ContactForm />
+  {/* <SearchBar />
+  <ContactList /> */}
 </div>
 };
