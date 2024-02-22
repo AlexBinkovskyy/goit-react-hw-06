@@ -3,7 +3,7 @@ import { Contact } from "../Contact/Contact";
 
 
 export function ContactList() {
-const contacts = useSelector(state => state.contacts.contactItems);
+const contacts = useSelector(state => state.filteredContacts.contactItems);
 
   return (
     <ul className="list">

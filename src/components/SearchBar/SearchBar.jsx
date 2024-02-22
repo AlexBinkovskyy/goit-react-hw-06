@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import CSS from './SearchBar.module.css';
-import {contactFilter } from '../../redux/filterSlice';
+import { contactFilter } from '../../redux/filterSlice';
 
 export function SearchBar() {
-const dispatch= useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -11,7 +11,9 @@ const dispatch= useDispatch();
       <input
         className={CSS.searchInput}
         type="text"
-        onChange={(event)=> dispatch(contactFilter(event.target.value.toLowerCase()))}
+        onChange={event =>
+          dispatch(contactFilter(event.target.value.toLowerCase()))
+        }
       />
     </div>
   );
