@@ -7,10 +7,9 @@ import { removeContact } from '../../redux/contactSlice';
 export function Contact({ name, number, id }) {
   const dispatch = useDispatch();
 
-  const  handleDelete = (id) => {
-    dispatch(removeContact(id))
-  }
-
+  const handleDelete = id => {
+    dispatch(removeContact(id));
+  };
 
   return (
     <li className={CSS.listItem}>

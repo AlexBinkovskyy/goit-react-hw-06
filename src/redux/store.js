@@ -11,11 +11,10 @@ import {
 import { contactReducer } from './contactSlice';
 import { filterContactReducer } from './filterSlice';
 
-
 export const store = configureStore({
   reducer: {
     contacts: contactReducer,
-    filteredContacts : filterContactReducer,
+    filteredContacts: filterContactReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

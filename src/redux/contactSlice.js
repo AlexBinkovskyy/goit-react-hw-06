@@ -32,8 +32,7 @@ const persContactConfig = {
   whiteList: ['contactItems'],
 };
 
-export const { addContact, removeContact, contactFilter } =
-  contactSlice.actions;
+export const { addContact, removeContact } = contactSlice.actions;
 export const contactReducer = persistReducer(
   persContactConfig,
   contactSlice.reducer

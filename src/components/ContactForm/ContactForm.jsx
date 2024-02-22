@@ -24,9 +24,11 @@ export function ContactForm() {
     number: Yup.number().integer().required('Required number'),
   });
 
-  const handleSubmit = (values, actions) => { 
+  const handleSubmit = (values, actions) => {
     actions.resetForm();
-    dispatch(addContact({id: nanoid(), name: values.name, number: values.number}))
+    dispatch(
+      addContact({ id: nanoid(), name: values.name, number: values.number })
+    );
   };
 
   return (
