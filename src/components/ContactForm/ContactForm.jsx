@@ -3,8 +3,7 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import CSS from './ContactForm.module.css';
-
-
+import { useDispatch } from 'react-redux';
 
 export function ContactForm() {
   const initialValues = {
@@ -14,6 +13,7 @@ export function ContactForm() {
 
   const nameID = useId();
   const numberID = useId();
+  const dispatch = useDispatch();
 
   const userSchema = Yup.object().shape({
     name: Yup.string()
@@ -23,12 +23,16 @@ export function ContactForm() {
     number: Yup.number().integer().required('Required number'),
   });
 
-  const handleSubmit = (values, actions) => {
+  const handleSubmit = (values, actions) => { 
     actions.resetForm();
-    return addContactCard({
-      ...values,
-      id: nanoid(),
-    });
+    console.log(values);
+    dispatch(()=>{})
+  
+    // 
+    // return addContactCard({
+    //   ...values,
+    //   id: nanoid(),
+    // });
   };
 
   return (
