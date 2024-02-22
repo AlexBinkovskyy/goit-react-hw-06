@@ -16,7 +16,7 @@ export const contactSlice = createSlice({
   },
   reducers: {
     addContact: (state, action) => {
-      state.contactItems.push(action.payload);
+      state.contactItems.unshift(action.payload);
     },
     removeContact: (state, action) => {
       state.contactItems.splice(action.payload, 1);

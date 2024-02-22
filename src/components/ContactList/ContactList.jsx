@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
+import { Contact } from "../Contact/Contact";
 
 
 export function ContactList() {
-const contacts = useSelector();
+const contacts = useSelector(state => state.contacts.contactItems);
 
   return (
     <ul className="list">

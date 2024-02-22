@@ -26,7 +26,6 @@ export function ContactForm() {
 
   const handleSubmit = (values, actions) => { 
     actions.resetForm();
-    console.log(values);
     dispatch(addContact({id: nanoid(), name: values.name, number: values.number}))
   };
 

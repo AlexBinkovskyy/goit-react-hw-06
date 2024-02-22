@@ -6,7 +6,7 @@ export const App = () => {
   return <div className='wrapper'>
   <h1 className="header">Phonebook</h1>
   <ContactForm />
-  {/* <SearchBar />
-  <ContactList /> */}
+  {/* <SearchBar /> */}
+  <ContactList />
 </div>
 };
