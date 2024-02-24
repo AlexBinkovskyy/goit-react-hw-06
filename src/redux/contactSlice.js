@@ -12,14 +12,14 @@ const contacts = [
 const contactSlice = createSlice({
   name: 'contacts',
   initialState: {
-    contactItems: contacts,
+    items: contacts,
   },
   reducers: {
     addContact: (state, action) => {
-      state.contactItems.unshift(action.payload);
+      state.items.unshift(action.payload);
     },
     removeContact: (state, action) => {
-      state.contactItems = state.contactItems.filter(
+      state.items = state.items.filter(
         item => item.id !== action.payload
       );
     },
@@ -29,7 +29,7 @@ const contactSlice = createSlice({
 const persContactConfig = {
   key: 'contacts',
   storage,
-  whiteList: ['contactItems'],
+  whiteList: ['items'],
 };
 
 export const { addContact, removeContact } = contactSlice.actions;

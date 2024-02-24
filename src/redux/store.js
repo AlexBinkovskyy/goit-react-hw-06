@@ -14,7 +14,7 @@ import { filterContactReducer } from './filterSlice';
 export const store = configureStore({
   reducer: {
     contacts: contactReducer,
-    filteredContacts: filterContactReducer,
+    filter: filterContactReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
