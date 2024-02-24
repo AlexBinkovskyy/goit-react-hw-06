@@ -36,6 +36,7 @@ export function ContactForm() {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={userSchema}
+      validateOnBlur={false}
     >
       <Form className={CSS.form}>
         <label htmlFor={nameID}>Name</label>
